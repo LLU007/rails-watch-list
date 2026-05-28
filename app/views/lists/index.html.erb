@@ -1,0 +1,9 @@
+<h1 class="text-center">All Lists</h1>
+
+<% @lists.each do |list|%>
+  <div class="m-3">
+    <%= link_to list.name, list_path(list)%>
+  </div>
+<%end%>
+
+<%= link_to "New List", new_list_path, class: "btn btn-primary m-3" %>
