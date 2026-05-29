@@ -1,7 +1,9 @@
-<div class="card-category mb-3"
-    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
-    <h1 class="text-center"><%= @list.name%></h1>
-</div>
+<% if @list.photo.attached? %>
+  <div class="card-category mb-3"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
+      <h1 class="text-center"><%= @list.name%></h1>
+  </div>
+<% end %>
 
 <% @bookmarks.each do |bookmark| %>
   <div class="m-5">
