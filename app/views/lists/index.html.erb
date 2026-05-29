@@ -1,5 +1,11 @@
 <h1 class="text-center">All Lists</h1>
 
+<%= cl_image_tag("wrnkvh49lzetz3qahb8z",
+      width: 400, height: 300, crop: :fill) %>
+
+<%= cl_image_tag("rw3zednsaplgtcibz3vw",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
 <% @lists.each do |list|%>
   <div class="m-3">
     <%= link_to list.name, list_path(list)%>
